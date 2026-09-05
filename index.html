@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A practical guide index for JavaScript, Python, and C#.">
+  <title>Language Guides</title>
+  <style>
+    :root {
+      --ink: #18212b;
+      --muted: #64707d;
+      --paper: #f6f8fa;
+      --line: #dce3e9;
+      --js: #d7a600;
+      --python: #2675b9;
+      --csharp: #7b4bb7;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(215, 166, 0, 0.13), transparent 30rem),
+        radial-gradient(circle at 100% 20%, rgba(38, 117, 185, 0.12), transparent 28rem),
+        var(--paper);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 4.5rem 0 3rem;
+    }
+
+    header {
+      max-width: 720px;
+      margin-bottom: 3rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.6rem;
+      color: var(--muted);
+      font-family: "Trebuchet MS", sans-serif;
+      font-size: 0.76rem;
+      font-weight: bold;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, p { margin-top: 0; }
+
+    h1 {
+      margin-bottom: 1rem;
+      font-size: clamp(2.8rem, 7vw, 5.8rem);
+      line-height: 0.96;
+      letter-spacing: -0.04em;
+      font-weight: normal;
+    }
+
+    .intro {
+      max-width: 600px;
+      color: var(--muted);
+      font-size: 1.15rem;
+    }
+
+    .guides {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+    }
+
+    .guide {
+      display: flex;
+      flex-direction: column;
+      min-height: 430px;
+      padding: 1.5rem;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-top: 6px solid var(--accent);
+      box-shadow: 0 12px 30px rgba(24, 33, 43, 0.06);
+    }
+
+    .guide-number {
+      color: var(--accent);
+      font-family: "Trebuchet MS", sans-serif;
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+    }
+
+    h2 {
+      margin: 0.55rem 0 0.5rem;
+      font-size: 2rem;
+      line-height: 1.1;
+      font-weight: normal;
+    }
+
+    .guide p { color: var(--muted); }
+
+    .topics {
+      margin: 0.7rem 0 1.5rem;
+      padding: 0;
+      list-style: none;
+      font-family: "Trebuchet MS", sans-serif;
+      font-size: 0.9rem;
+    }
+
+    .topics li {
+      padding: 0.42rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topics li::before {
+      content: "\\2192";
+      margin-right: 0.5rem;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .resource {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: auto;
+      padding: 0.75rem 0.9rem;
+      color: var(--ink);
+      background: #f8fafb;
+      border: 1px solid var(--line);
+      font-family: "Trebuchet MS", sans-serif;
+      font-size: 0.85rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+    }
+
+    .resource:hover,
+    .resource:focus-visible {
+      background: #eef3f6;
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .javascript { --accent: var(--js); }
+    .python { --accent: var(--python); }
+    .csharp { --accent: var(--csharp); }
+
+    footer {
+      margin-top: 2rem;
+      color: var(--muted);
+      font-family: "Trebuchet MS", sans-serif;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 800px) {
+      .page { padding-top: 3rem; }
+      .guides { grid-template-columns: 1fr; }
+      .guide { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p class="eyebrow">Programming language reference</p>
+      <h1>Choose your next language.</h1>
+      <p class="intro">Start with the essentials, build a small project, and use the official documentation as your reference.</p>
+    </header>
+
+    <section class="guides" aria-label="Programming language guides">
+      <article class="guide javascript">
+        <span class="guide-number">01 / WEB</span>
+        <h2>JavaScript</h2>
+        <p>A versatile language for interactive websites, servers, and applications.</p>
+        <ul class="topics">
+          <li>Syntax, variables, and data types</li>
+          <li>Functions, objects, and arrays</li>
+          <li>DOM and browser events</li>
+          <li>Async code and APIs</li>
+        </ul>
+        <a class="resource" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank" rel="noopener noreferrer">Open JavaScript Guide <span aria-hidden="true">&#8599;</span></a>
+      </article>
+
+      <article class="guide python">
+        <span class="guide-number">02 / GENERAL PURPOSE</span>
+        <h2>Python</h2>
+        <p>A readable, approachable language for automation, data, web apps, and more.</p>
+        <ul class="topics">
+          <li>Variables, collections, and control flow</li>
+          <li>Functions and modules</li>
+          <li>Object-oriented programming</li>
+          <li>Files, packages, and testing</li>
+        </ul>
+        <a class="resource" href="https://docs.python.org/3/tutorial/" target="_blank" rel="noopener noreferrer">Open Python Tutorial <span aria-hidden="true">&#8599;</span></a>
+      </article>
+
+      <article class="guide csharp">
+        <span class="guide-number">03 / .NET</span>
+        <h2>C#</h2>
+        <p>A strongly typed language for desktop, web, cloud, game, and enterprise software.</p>
+        <ul class="topics">
+          <li>Types, expressions, and control flow</li>
+          <li>Classes, records, and interfaces</li>
+          <li>LINQ and collections</li>
+          <li>Async programming with .NET</li>
+        </ul>
+        <a class="resource" href="https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/" target="_blank" rel="noopener noreferrer">Open C# Tour <span aria-hidden="true">&#8599;</span></a>
+      </article>
+    </section>
+
+    <footer>Three paths in. Plenty to build.</footer>
+  </main>
+</body>
+</html>
